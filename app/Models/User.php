@@ -23,13 +23,10 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-   
-    protected $casts = [
-    'email_verified_at' => 'datetime',
-    'password' => 'hashed'
-];
 
-   
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 
     public function department()
     {

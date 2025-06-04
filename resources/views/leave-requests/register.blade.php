@@ -7,32 +7,36 @@
     <div class="col-md-6">
         <div class="card shadow">
             <div class="card-header bg-success text-white">
-                <h4 class="mb-0">Register</h4>
+                <h4 class="mb-0"><i class="fas fa-user-plus me-2"></i>Register</h4>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
+
                     <div class="mb-3">
-                        <label>Name</label>
-                        <input type="text" name="name" class="form-control" required>
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" name="name" value="{{ old('name') }}" required>
                     </div>
+
                     <div class="mb-3">
-                        <label>Email</label>
-                        <input type="email" name="email" class="form-control" required>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" value="{{ old('email') }}" required>
                     </div>
+
                     <div class="mb-3">
-                        <label>Password</label>
-                        <input type="password" name="password" class="form-control" required>
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" required>
                     </div>
+
                     <div class="mb-3">
-                        <label>Confirm Password</label>
-                        <input type="password" name="password_confirmation" class="form-control" required>
+                        <label for="password_confirmation" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" name="password_confirmation" required>
                     </div>
+
                     <div class="d-grid">
                         <button type="submit" class="btn btn-success">Register</button>
                     </div>
                 </form>
-                <p class="mt-3">Already have an account? <a href="{{ route('login') }}">Login here</a></p>
             </div>
         </div>
     </div>
