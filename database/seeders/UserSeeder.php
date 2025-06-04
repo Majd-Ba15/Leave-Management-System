@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'System Admin',
             'email' => 'admin@company.com',
-            'password' => Hash::make('password'),
+            'password' => 'password',/*Hash::make('password')*/ 
             'role' => 'admin',
             'employee_id' => 'EMP001',
             'department_id' => $departments->where('code', 'IT')->first()->id,
@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
         $hrManager = User::create([
             'name' => 'HR Manager',
             'email' => 'hr.manager@company.com',
-            'password' => Hash::make('password'),
+            'password' => 'password'/*Hash::make('password')*/,
             'role' => 'manager',
             'employee_id' => 'EMP002',
             'department_id' => $departments->where('code', 'HR')->first()->id,
@@ -36,7 +36,7 @@ class UserSeeder extends Seeder
         $itManager = User::create([
             'name' => 'IT Manager',
             'email' => 'it.manager@company.com',
-            'password' => Hash::make('password'),
+            'password' => 'password'/*Hash::make('password')*/,
             'role' => 'manager',
             'employee_id' => 'EMP003',
             'department_id' => $departments->where('code', 'IT')->first()->id,
@@ -50,7 +50,7 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'John Employee',
             'email' => 'john@company.com',
-            'password' => Hash::make('password'),
+            'password' => 'password'/*Hash::make('password')*/,
             'role' => 'employee',
             'employee_id' => 'EMP004',
             'department_id' => $departments->where('code', 'IT')->first()->id,
@@ -59,7 +59,7 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'Jane Employee',
             'email' => 'jane@company.com',
-            'password' => Hash::make('password'),
+            'password' => 'password'/*Hash::make('password')*/,
             'role' => 'employee',
             'employee_id' => 'EMP005',
             'department_id' => $departments->where('code', 'HR')->first()->id,
